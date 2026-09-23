@@ -3,109 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paintings - Layout Tailwind</title>
+  <title>Paintings</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-100 flex justify-center py-6 text-gray-700 font-sans">
+<body class="bg-gray-100 flex justify-center py-4 sm:py-8 text-gray-700 font-sans px-2 sm:px-4">
 
-  <!-- Main Container -->
-  <main class="w-full max-w-4xl bg-white p-8 shadow-sm">
+  <!-- Container Principal Responsivo -->
+  <main class="w-full max-w-4xl bg-white p-4 sm:p-8 shadow-sm rounded-lg">
     
-    <!-- Title -->
-    <h1 class="text-center font-bold text-xl mb-4">Paintings</h1>
+    <!-- Título -->
+    <h1 class="text-center font-bold text-lg sm:text-xl mb-4">Paintings</h1>
 
-    <!-- Banner Placeholder -->
-    <div class="w-full h-36 bg-sky-200 rounded flex items-center justify-center text-sky-600 font-medium mb-10">
-      [Banner / Capa]
+    <!-- Banner Principal -->
+    <div class="w-full mb-6 sm:mb-10 overflow-hidden rounded">
+      <img src="img/header.svg" alt="Header Banner" class="w-full h-auto object-cover">
     </div>
 
-    <!-- 3 Features Section -->
+    <!-- Seção de 3 Ícones (1 col no Mobile / 3 col no Tablet e Desktop) -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-8">
-      <div>
-        <i class="fa-solid fa-gear text-2xl text-rose-500 mb-2"></i>
+      <div class="flex flex-col items-center">
+        <img src="img/icon1.svg" alt="Icon 1" class="w-8 h-8 mb-2">
         <h3 class="font-bold text-sm">Ipsum consequat</h3>
-        <p class="text-xs text-gray-400 mt-1">Sit amet dolor vulputate cursus et magna lorem ipsum dolor.</p>
+        <p class="text-xs text-gray-400 mt-1 max-w-xs">Sit amet dolor vulputate cursus et magna lorem ipsum dolor.</p>
       </div>
-      <div>
-        <i class="fa-solid fa-bolt text-2xl text-gray-700 mb-2"></i>
+      <div class="flex flex-col items-center">
+        <img src="img/icon2.svg" alt="Icon 2" class="w-8 h-8 mb-2">
         <h3 class="font-bold text-sm">Magna etiam dolor</h3>
-        <p class="text-xs text-gray-400 mt-1">Sit amet dolor vulputate cursus et magna lorem ipsum dolor.</p>
+        <p class="text-xs text-gray-400 mt-1 max-w-xs">Sit amet dolor vulputate cursus et magna lorem ipsum dolor.</p>
       </div>
-      <div>
-        <i class="fa-solid fa-star text-2xl text-sky-400 mb-2"></i>
+      <div class="flex flex-col items-center">
+        <img src="img/icon3.svg" alt="Icon 3" class="w-8 h-8 mb-2">
         <h3 class="font-bold text-sm">Tempus adipiscing</h3>
-        <p class="text-xs text-gray-400 mt-1">Sit amet dolor vulputate cursus et magna lorem ipsum dolor.</p>
+        <p class="text-xs text-gray-400 mt-1 max-w-xs">Sit amet dolor vulputate cursus et magna lorem ipsum dolor.</p>
       </div>
     </section>
 
-    <!-- CTAs -->
-    <div class="flex justify-center gap-4 mb-12">
-      <button class="bg-rose-500 hover:bg-rose-600 text-white text-xs font-semibold px-6 py-2 rounded">Get Started</button>
-      <button class="bg-gray-800 hover:bg-gray-900 text-white text-xs font-semibold px-6 py-2 rounded">Learn More</button>
+    <!-- Botões de Ação (Empilhados no Mobile / Lado a lado no Tablet/Desktop) -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-10 sm:mb-12">
+      <button class="w-full sm:w-auto bg-rose-500 hover:bg-rose-600 text-white text-xs font-semibold px-6 py-2.5 rounded transition">Get Started</button>
+      <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-xs font-semibold px-6 py-2.5 rounded transition">Learn More</button>
     </div>
 
-    <!-- Divider -->
+    <!-- Divisor -->
     <div class="border-t relative my-8 text-center">
       <span class="bg-white px-3 text-xs text-gray-400 relative -top-2.5 font-medium">My Portfolio</span>
     </div>
 
-    <!-- Portfolio Grid (6 Cards) -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Grid do Portfólio (1 col Mobile / 2 col Tablet / 3 col Desktop) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <!-- Card Template (Repetido 6x) -->
-      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between">
+      <!-- Card 1 -->
+      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between hover:shadow-sm transition">
         <div>
-          <div class="w-full h-28 bg-gray-200 rounded mb-3 flex items-center justify-center text-xs text-gray-400">[Imagem]</div>
+          <img src="img/pic02.svg" alt="Pic 02" class="w-full h-40 sm:h-36 object-cover rounded mb-3">
           <h4 class="font-bold text-xs mb-1">Ipsum feugiat et dolor</h4>
           <p class="text-[11px] text-gray-400 mb-3">Lorem ipsum dolor sit amet vulputate cursus et magna lorem ipsum.</p>
         </div>
-        <button class="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded self-start">Find out more</button>
+        <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded self-start transition">Find out more</button>
       </div>
 
-      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between">
+      <!-- Card 2 -->
+      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between hover:shadow-sm transition">
         <div>
-          <div class="w-full h-28 bg-gray-200 rounded mb-3 flex items-center justify-center text-xs text-gray-400">[Imagem]</div>
+          <img src="img/pic03.svg" alt="Pic 03" class="w-full h-40 sm:h-36 object-cover rounded mb-3">
           <h4 class="font-bold text-xs mb-1">Sed etiam lorem nulla</h4>
           <p class="text-[11px] text-gray-400 mb-3">Lorem ipsum dolor sit amet vulputate cursus et magna lorem ipsum.</p>
         </div>
-        <button class="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded self-start">Find out more</button>
+        <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded self-start transition">Find out more</button>
       </div>
 
-      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between">
+      <!-- Card 3 -->
+      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between hover:shadow-sm transition">
         <div>
-          <div class="w-full h-28 bg-gray-200 rounded mb-3 flex items-center justify-center text-xs text-gray-400">[Imagem]</div>
+          <img src="img/pic04.svg" alt="Pic 04" class="w-full h-40 sm:h-36 object-cover rounded mb-3">
           <h4 class="font-bold text-xs mb-1">Consequat et tempus</h4>
           <p class="text-[11px] text-gray-400 mb-3">Lorem ipsum dolor sit amet vulputate cursus et magna lorem ipsum.</p>
         </div>
-        <button class="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded self-start">Find out more</button>
+        <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded self-start transition">Find out more</button>
       </div>
 
-      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between">
+      <!-- Card 4 -->
+      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between hover:shadow-sm transition">
         <div>
-          <div class="w-full h-28 bg-gray-200 rounded mb-3 flex items-center justify-center text-xs text-gray-400">[Imagem]</div>
+          <img src="img/pic05.svg" alt="Pic 05" class="w-full h-40 sm:h-36 object-cover rounded mb-3">
           <h4 class="font-bold text-xs mb-1">Blandit sed adipiscing</h4>
           <p class="text-[11px] text-gray-400 mb-3">Lorem ipsum dolor sit amet vulputate cursus et magna lorem ipsum.</p>
         </div>
-        <button class="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded self-start">Find out more</button>
+        <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded self-start transition">Find out more</button>
       </div>
 
-      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between">
+      <!-- Card 5 -->
+      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between hover:shadow-sm transition">
         <div>
-          <div class="w-full h-28 bg-gray-200 rounded mb-3 flex items-center justify-center text-xs text-gray-400">[Imagem]</div>
+          <img src="img/pic06.svg" alt="Pic 06" class="w-full h-40 sm:h-36 object-cover rounded mb-3">
           <h4 class="font-bold text-xs mb-1">Etiam nisl consequat</h4>
           <p class="text-[11px] text-gray-400 mb-3">Lorem ipsum dolor sit amet vulputate cursus et magna lorem ipsum.</p>
         </div>
-        <button class="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded self-start">Find out more</button>
+        <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded self-start transition">Find out more</button>
       </div>
 
-      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between">
+      <!-- Card 6 -->
+      <div class="border border-gray-100 rounded p-3 flex flex-col justify-between hover:shadow-sm transition">
         <div>
-          <div class="w-full h-28 bg-gray-200 rounded mb-3 flex items-center justify-center text-xs text-gray-400">[Imagem]</div>
+          <img src="img/pic07.svg" alt="Pic 07" class="w-full h-40 sm:h-36 object-cover rounded mb-3">
           <h4 class="font-bold text-xs mb-1">Dolore nisl feugiat</h4>
           <p class="text-[11px] text-gray-400 mb-3">Lorem ipsum dolor sit amet vulputate cursus et magna lorem ipsum.</p>
         </div>
-        <button class="bg-gray-800 text-white text-[10px] px-3 py-1.5 rounded self-start">Find out more</button>
+        <button class="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 text-white text-[10px] px-3 py-1.5 rounded self-start transition">Find out more</button>
       </div>
 
     </section>
